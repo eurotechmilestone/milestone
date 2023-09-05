@@ -148,7 +148,7 @@ const Navbar = () => {
                 href="#"
                 data-te-dropdown-item-ref=""
               >
-                Action
+                Actionn
               </a>
             </li>
             <li>
