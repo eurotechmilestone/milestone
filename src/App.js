@@ -8,9 +8,7 @@ function App() {
   return (
     <BrowserRouter>
       <Navbar />
-      <h1>
-        join
-      </h1>
+      
       <Slider2 />
     <Join/>
     
