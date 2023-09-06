@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./Slider2.css"
 
 
@@ -6,9 +6,14 @@ import "./Slider2.css"
 import { Carousel, initTE } from "tw-elements";
 import { Link } from "react-router-dom";
 
-initTE({ Carousel });
+
 
 const Slider2 = () => {
+
+  useEffect(() => {
+    initTE({ Carousel });
+  }, [])
+  
   return (
     <div
     id="carouselExampleIndicators"
