@@ -3,11 +3,7 @@ import "./Slider2.css"
 import { Carousel, initTE } from "tw-elements";
 import { useEffect } from "react";
 
-
-
-   
-  
-  const Slider2 = () =>{
+ const Slider2 = () =>{
 
     useEffect(() => {
   initTE( Carousel);

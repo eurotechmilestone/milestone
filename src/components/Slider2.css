@@ -23,7 +23,7 @@ body{
 }
 
 
-button:hover{
+.buttons button:hover{
     color: black;
     background-color: white;
 }
