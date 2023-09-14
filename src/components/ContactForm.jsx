@@ -45,6 +45,7 @@ const ContactForm = () => {
           </div>
           <span>support@kindedo.com </span>
         </div>
+        
       </div>
 
       {/* contact icons finished */}

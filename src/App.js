@@ -3,12 +3,12 @@ import "swiper/css";
 import Navbar from "./components/navbar/Navbar";
 import { BrowserRouter } from "react-router-dom";
 
-// import Slider2 from "./components/Slider2";
+ import Slider2 from "./components/Slider2";
 // import SwiperOur from "./components/SwiperOur";
 // import Settling from "./components/Settling";
-// import WayToLearn from "./components/WayToLearn";
+ import WayToLearn from "./components/WayToLearn";
 // import Faq from "./components/Faq";
-// import ContactForm from "./components/ContactForm";
+ import ContactForm from "./components/ContactForm";
 // import Table from "./components/table/Table";
 // import BestFor from "./components/BestFor";
 // import ProgramDetails from "./components/ProgramDetails";
@@ -19,16 +19,18 @@ function App() {
   return (
     <BrowserRouter>
       <Navbar />
-
+<WayToLearn />
+<Slider2 />
+<ContactForm />
       <h1>Buraya bir şey eklemeyin arkadaşlar</h1>
-      {/* <Slider2 />
-      <ContactForm />
+      {/* 
+      
       <Faq />
       <SwiperOur />
       <Settling />
       <ProgramDetails />
       <BestFor />
-      <WayToLearn />
+      
       <Table />
       <Programs />
       <BreadCrumb /> */}
