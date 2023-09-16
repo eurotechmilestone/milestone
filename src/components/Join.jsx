@@ -1,6 +1,35 @@
 import React from "react";
+import { useEffect, useState } from 'react';
+import axios from 'axios';
+
+
 
 const Join = () => {
+  const [joinData, setJoinData] = useState([])
+  const getJoin=async()=>{
+    const url="https://fuatmercan.com/kids/api/v1/page.php?slug=index&lang=en&token=frpQ8/CDUfTsNoUUkbL0121PkOOjWJ1eDOfkQd3lWz3n/ZY/zu28pvFTW34u7M8CTKAdaQeWkT42n1rMsw==588cb53f476e2e13cde27315433d124c"
+    try {
+    const{data}= await axios(url)
+
+    const datas =data.filter((item,index)=>item.modulName === 'component3')
+    const {data:joinNewData} = datas[0]
+
+ // component 3 deki bilgileri filitreleyerek cekmek icin yazilan fonsiyon yaziyoruz asagiya
+    setJoinData(joinNewData)
+
+   
+
+      console.log(datas[0]);
+
+    } catch (error) {
+    console.log(error);
+    }
+    
+    }
+    
+    useEffect(()=>{
+    getJoin()
+    },[])
   return (
   
     <div>
@@ -18,12 +47,10 @@ const Join = () => {
         
         <div className="flex justify-center items-center flex-col text-white">
           <h1 className="baslik text-center text-5xl pb-5">
-            Join Our New Session
+            { joinData.title1}
           </h1>
           <p className="text-center">
-            Kindedo believes that good questions drive good answers.
-            <br /> Whether it's a query about the world around us or a
-            challenge.
+          { joinData.content1}
           </p>
 
           <div className="mt-8 ">
