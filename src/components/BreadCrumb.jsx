@@ -1,4 +1,8 @@
+import { useDispatch, useSelector } from "react-redux";
+
 const BreadCrumb = () => {
+  const dispatch=useDispatch()
+  const{pageData,error,loading}= useSelector((this.state.home))
   return (
     <div className=" relative font-fredoka h-[320px]  md:h-[300px]">
       <div className="w-full h-full">

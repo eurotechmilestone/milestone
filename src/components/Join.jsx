@@ -59,7 +59,7 @@ const Join = () => {
               className="text-[14px] bg-[#FF9B24] hover:bg-[#FFF] overflow-hidden block w-30 px-4 relative group xs:px-8 py-5 rounded-3xl text-white  hover:text-[#FF9B24] duration-900 "
             
               <span className="absolute left-6 bottom-2.5 group-hover: group-hover:left-6 group-hover:bottom-9 duration-500 ">
-                Apply Now 
+                Apply Now
               </span>
              
             </a>

@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-/* nav .nav-drop > ul > li{
+nav .nav-drop > ul > li{
 position:relative;
 }
 
@@ -50,7 +50,7 @@ nav ul .dropdown ul li a{
     border-radius: 34px;
     color: #000000;
 }
-/* .menu > ul > li > a::after {
+/* /* .menu > ul > li > a::after {
     content: "\f0d7";
     font-weight: 900;
     margin-left: 5px;
@@ -73,9 +73,9 @@ nav > ul > li a:hover + .dropdown{
     opacity: 1;
     visibility: visible;
     transform: scale(1);
-}  */
+} 
 .menu {
-    /* background: #eee; */
+    background: #eee;
     border-radius: 10px;
     width: 700px;
     margin-bottom: 20px;
@@ -215,4 +215,4 @@ nav > ul > li a:hover + .dropdown{
 
 .menu ul .dropdown li[data-dropdown]:hover > a::after {
     transform: rotate(-180deg);
-}
+} */
