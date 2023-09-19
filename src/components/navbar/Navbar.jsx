@@ -5,7 +5,6 @@ import NavbarTop from "./NavbarTop";
 import MenuNavbar from "./MenuNavbar";
 import axios from "axios";
 import { useDispatch, useSelector } from "react-redux";
-import { setMenu } from "../../features/menuSlice";
 
 initTE({ Collapse, Dropdown });
 
@@ -14,23 +13,22 @@ const Navbar = () => {
   const dispatch = useDispatch();
   const { menu } = useSelector((state) => state.menu);
 
-  // console.log(menu)
+  console.log(menu);
 
-  const menuFunction = async () => {
-    const url =
-      "https://fuatmercan.com/kids/api/v1/menu.php?lang=en&token=frpQ8/CDUfTsNoUUkbL0121PkOOjWJ1eDOfkQd3lWz3n/ZY/zu28pvFTW34u7M8CTKAdaQeWkT42n1rMsw==588cb53f476e2e13cde27315433d124c";
-    try {
-      const { data } = await axios(url);
-      dispatch(setMenu(data));
-      //  setMenu(data)
-      //  console.log(data)
-    } catch (error) {
-      console.log(error);
-    }
-  };
-  useEffect(() => {
-    menuFunction();
-  }, []);
+  // const menuFunction =async()=>{
+  //   const url="https://fuatmercan.com/kids/api/v1/menu.php?lang=en&token=frpQ8/CDUfTsNoUUkbL0121PkOOjWJ1eDOfkQd3lWz3n/ZY/zu28pvFTW34u7M8CTKAdaQeWkT42n1rMsw==588cb53f476e2e13cde27315433d124c"
+  //   try {
+  //    const {data} =await axios(url)
+  //    dispatch(setMenu(data))
+  //   //  setMenu(data)
+  //    console.log(data)
+  //   } catch (error) {
+  //     console.log(error)
+  //   }
+  // }
+  // useEffect(() => {
+  //   menuFunction()
+  // }, [])
 
   return (
     <>
@@ -90,9 +88,40 @@ const Navbar = () => {
               className="list-style-none mr-auto flex flex-col pl-0 lg:flex-row"
               data-te-navbar-nav-ref=""
             >
-              {menu.map((item, index) => (
-                <MenuNavbar item={item} key={index} />
-              ))}
+              {menu?.length > 0 &&
+                menu?.map((item, index) => (
+                  <MenuNavbar item={item} key={index} />
+                ))}
+
+              {/* Team link */}
+              {/* <li className="mb-4 lg:mb-0 lg:pr-2" data-te-nav-item-ref="">
+            <a
+              className="text-neutral-500 transition duration-200 hover:text-neutral-700 hover:ease-in-out focus:text-neutral-700 disabled:text-black/30 motion-reduce:transition-none lg:px-2 [&.active]:text-black/90 dark:[&.active]:text-neutral-400"
+              href="#"
+              data-te-nav-link-ref=""
+            >
+              About
+            </a>
+          </li>
+          {/* Projects link */}
+              {/* <li className="mb-4 lg:mb-0 lg:pr-2" data-te-nav-item-ref="">
+            <a
+              className="text-neutral-500 transition duration-200 hover:text-neutral-700 hover:ease-in-out focus:text-neutral-700 disabled:text-black/30 motion-reduce:transition-none lg:px-2 [&.active]:text-black/90 dark:[&.active]:text-neutral-400"
+              href="#"
+              data-te-nav-link-ref=""
+            >
+              Programs
+            </a>
+          </li> */}
+              {/* <li className="mb-4 lg:mb-0 lg:pr-2" data-te-nav-item-ref="">
+            <a
+              className="text-neutral-500 transition duration-200 hover:text-neutral-700 hover:ease-in-out focus:text-neutral-700 disabled:text-black/30 motion-reduce:transition-none lg:px-2 [&.active]:text-black/90 dark:[&.active]:text-neutral-400"
+              href="#"
+              data-te-nav-link-ref=""
+            >
+              Contact
+            </a>
+          </li> */}
             </ul>
           </div>
           {/* Right elements */}
