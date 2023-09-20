@@ -10,8 +10,8 @@ const BestFor = () => {
         >
           <div className="justify-center flex">
             <img
-              /*   src="images/kids.jpg"*/
-              src="https://playtolearnpreschool.us/wp-content/uploads/2015/05/FEATURED-SQUARED-2.png"
+               src="images/1.png"
+              // src="https://playtolearnpreschool.us/wp-content/uploads/2015/05/FEATURED-SQUARED-2.png"
               alt=""
               className="rounded-full h-80 object-fill shadow-3xl "
             />
