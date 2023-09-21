@@ -9,6 +9,7 @@ import { getApiData } from "./features/ApiSlice";
 import Content from "./pages/Content";
 import { setLanguage } from "./features/LanguageSlice";
 
+
 function App() {
   const { preferredLanguage: lang } = useSelector((state) => state.lang);
   const { menu } = useSelector((state) => state.menu);
